@@ -31,6 +31,7 @@ Use this image only if you don't store any persistent data on docker volumes!**
 
 ```sh
 docker container run \
+    -d \
     --restart unless-stopped \
     -v /var/run/docker.sock:/var/run/docker.sock \
     jaedle/cleanup-docker:latest
@@ -43,6 +44,7 @@ the environment variable CLEANUP_RATE specified in seconds.
 
 ```sh
 docker container run \
+    -d \
     --restart unless-stopped \
     -e CLEANUP_RATE=3600 \
     -v /var/run/docker.sock:/var/run/docker.sock \
