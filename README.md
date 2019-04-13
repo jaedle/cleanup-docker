@@ -55,6 +55,8 @@ docker container run \
 The interval of the cleanup (default 24 hours) can be configured through
 the environment variable CLEANUP_RATE specified in seconds.
 
+This will cleanup each hour:
+
 ```sh
 docker container run \
     -d \
