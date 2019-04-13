@@ -9,4 +9,4 @@ echo 'Deleting unusued volumes'
 docker volume prune -f
 
 echo 'Deleting unused images'
-docker image prune -f
+docker image prune -a -f
