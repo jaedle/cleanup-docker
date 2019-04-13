@@ -14,7 +14,7 @@ The following commands will be triggered on startup of the container.
 ```sh
 docker container prune -f
 docker volume prune -f
-docker image prune -f
+docker image prune -a -f
 ```
 
 This will delete all unused containers, unbound volumes and unused images.
