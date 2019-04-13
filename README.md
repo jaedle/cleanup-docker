@@ -29,6 +29,8 @@ Use this image only if you don't store any persistent data on docker volumes!**
 
 ## Usage
 
+For amd64 architecture:
+
 ```sh
 docker container run \
     -d \
@@ -36,6 +38,17 @@ docker container run \
     -v /var/run/docker.sock:/var/run/docker.sock \
     jaedle/cleanup-docker:latest
 ```
+
+For arm32v7 architecture:
+
+```sh
+docker container run \
+    -d \
+    --restart unless-stopped \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    jaedle/cleanup-docker:arm32v7
+```
+
 
 ## Parameters
 
