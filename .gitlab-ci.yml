@@ -1,9 +1,0 @@
-build_and_deploy:
-  image: docker:stable
-  stage: build
-  script:
-    - docker image build --pull --no-cache -t jaedle/cleanup-docker:arm32v7 .
-    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    - docker image push jaedle/cleanup-docker:arm32v7
-  only:
-    - master
