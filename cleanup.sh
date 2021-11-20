@@ -2,4 +2,4 @@
 
 set -e
 
-docker system prune -f --all
+docker system prune -f --all --volumes

@@ -12,7 +12,7 @@ To prevent this problem I created this small docker utility.
 The following commands will be triggered on startup of the container.
 
 ```sh
-docker system prune -f --all
+docker system prune -f --all --volumes
 ```
 
 This will delete all unused containers, unbound volumes and unused images.
