@@ -12,9 +12,7 @@ To prevent this problem I created this small docker utility.
 The following commands will be triggered on startup of the container.
 
 ```sh
-docker container prune -f
-docker volume prune -f
-docker image prune -a -f
+docker system prune -f --all
 ```
 
 This will delete all unused containers, unbound volumes and unused images.
@@ -29,8 +27,6 @@ Use this image only if you don't store any persistent data on docker volumes!**
 
 ## Usage
 
-For amd64 architecture:
-
 ```sh
 docker container run \
     -d \
@@ -38,17 +34,6 @@ docker container run \
     -v /var/run/docker.sock:/var/run/docker.sock \
     jaedle/cleanup-docker:latest
 ```
-
-For arm32v7 architecture:
-
-```sh
-docker container run \
-    -d \
-    --restart unless-stopped \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    jaedle/cleanup-docker:arm32v7
-```
-
 
 ## Parameters
 
